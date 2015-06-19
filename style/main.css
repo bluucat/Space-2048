@@ -1,14 +1,15 @@
-@import url(fonts/clear-sans.css);
+@import url(http://fonts.googleapis.com/css?family=Fugaz+One|Muli:400italic,400,700);
 html, body {
   margin: 0;
   padding: 0;
-  background: #faf8ef;
-  color: #776e65;
-  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  background: url(http://astrophile.org/2048space/img/spacetile.png);
+  color: #FFFED2;
+  font-family: "Muli", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px; }
 
 body {
-  margin: 80px 0; }
+  margin: 80px 0; 
+  text-align: center;}
 
 .heading:after {
   content: "";
@@ -16,11 +17,14 @@ body {
   clear: both; }
 
 h1.title {
+  font-family: 'Fugaz One';
+  width: 100%;
   font-size: 80px;
   font-weight: bold;
   margin: 0;
+  margin-left: 0%;
   display: block;
-  float: left; }
+  float: center; }
 
 @-webkit-keyframes move-up {
   0% {
@@ -50,21 +54,21 @@ h1.title {
     opacity: 0; } }
 
 .scores-container {
-  float: right;
-  text-align: right; }
+  float: center;
+  text-align: center; }
 
 .score-container, .best-container {
   position: relative;
   display: inline-block;
-  background: #bbada0;
+  background: #332F45;
   padding: 15px 25px;
   font-size: 25px;
   height: 25px;
   line-height: 47px;
   font-weight: bold;
-  border-radius: 3px;
-  color: white;
-  margin-top: 8px;
+  border-radius: 15%;
+  color: #FFFED2;
+  margin-top: 2%;
   text-align: center; }
   .score-container:after, .best-container:after {
     position: absolute;
@@ -73,9 +77,9 @@ h1.title {
     left: 0;
     text-transform: uppercase;
     font-size: 13px;
-    line-height: 13px;
+    line-height: 2px;
     text-align: center;
-    color: #eee4da; }
+    color: #9FD6AE; }
   .score-container .score-addition, .best-container .score-addition {
     position: absolute;
     right: 30px;
@@ -83,7 +87,7 @@ h1.title {
     font-size: 25px;
     line-height: 25px;
     font-weight: bold;
-    color: rgba(119, 110, 101, 0.9);
+    color: rgba(51, 47, 69, 0.9);
     z-index: 100;
     -webkit-animation: move-up 600ms ease-in;
     -moz-animation: move-up 600ms ease-in;
@@ -104,21 +108,25 @@ p {
   line-height: 1.65; }
 
 a {
-  color: #776e65;
+  color: #9FD6AE;
   font-weight: bold;
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer; }
 
 strong.important {
-  text-transform: uppercase; }
+  text-transform: uppercase; 
+  font-weight: bold;
+  color: #FFFFFF;
+  padding: 25%;}
 
 hr {
   border: none;
-  border-bottom: 1px solid #d8d4d0;
+  border-bottom: 5px solid #332F45;
   margin-top: 20px;
   margin-bottom: 30px; }
 
 .container {
+  background-color: #332F45;
   width: 500px;
   margin: 0 auto; }
 
@@ -151,7 +159,7 @@ hr {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  background: #bbada0;
+  background: #332F45;
   border-radius: 6px;
   width: 500px;
   height: 500px;
@@ -166,7 +174,7 @@ hr {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(238, 228, 218, 0.5);
+    background: rgba(51, 47, 69, 0.75);;
     z-index: 100;
     text-align: center;
     -webkit-animation: fade-in 800ms ease 1200ms;
@@ -186,7 +194,7 @@ hr {
       margin-top: 59px; }
     .game-container .game-message a {
       display: inline-block;
-      background: #8f7a66;
+      background: #332F45;
       border-radius: 3px;
       padding: 0 20px;
       text-decoration: none;
@@ -197,7 +205,7 @@ hr {
       .game-container .game-message a.keep-playing-button {
         display: none; }
     .game-container .game-message.game-won {
-      background: rgba(237, 194, 46, 0.5);
+      background: rgba(51, 47, 69, 0.5);
       color: #f9f6f2; }
       .game-container .game-message.game-won a.keep-playing-button {
         display: inline-block; }
@@ -222,8 +230,8 @@ hr {
   height: 106.25px;
   margin-right: 15px;
   float: left;
-  border-radius: 3px;
-  background: rgba(238, 228, 218, 0.35); }
+  border-radius: 100%;
+  background: rgba(41, 38, 56, 0.35); }
   .grid-cell:last-child {
     margin-right: 0; }
 
@@ -301,6 +309,8 @@ hr {
   transform: translate(363px, 363px); }
 
 .tile {
+  color: rgba(0,0,0,0);
+  border-radius: 100%;
   position: absolute;
   -webkit-transition: 100ms ease-in-out;
   -moz-transition: 100ms ease-in-out;
@@ -309,75 +319,87 @@ hr {
   -moz-transition-property: -moz-transform;
   transition-property: transform; }
   .tile .tile-inner {
-    border-radius: 3px;
+    border-radius: 100%;
     background: #eee4da;
     text-align: center;
     font-weight: bold;
     z-index: 10;
     font-size: 55px; }
   .tile.tile-2 .tile-inner {
-    background: #eee4da;
+    background: url('http://s17.postimg.org/6sqjhezi7/pluto_big.png');
+    background-size: cover;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+    
   .tile.tile-4 .tile-inner {
-    background: #ede0c8;
+    background: url('http://s17.postimg.org/5z9cb243j/moon_big.png');
+    background-size: cover;    
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+    
   .tile.tile-8 .tile-inner {
-    color: #f9f6f2;
-    background: #f2b179; }
+    background: url('http://s17.postimg.org/cfmwew20v/mercury_big.png');
+    background-size: cover;}
+    
   .tile.tile-16 .tile-inner {
-    color: #f9f6f2;
-    background: #f59563; }
+    background: url('http://s17.postimg.org/9k57ua8n3/mars_big.png');
+    background-size: cover;}
+    
   .tile.tile-32 .tile-inner {
-    color: #f9f6f2;
-    background: #f67c5f; }
+    background: url('http://s17.postimg.org/c6pboyp8f/venus_big.png');
+    background-size: cover;}
+    
   .tile.tile-64 .tile-inner {
-    color: #f9f6f2;
-    background: #f65e3b; }
+    background: url('http://s17.postimg.org/yauw83nzz/earth_big.png');
+    background-size: cover;}
+    
   .tile.tile-128 .tile-inner {
-    color: #f9f6f2;
-    background: #edcf72;
+    background: url('http://s17.postimg.org/xwtk8i3wf/neptune_big.png');
+    background-size: cover;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
     font-size: 45px; }
-    @media screen and (max-width: 520px) {
+    @media screen and (max-width: 480px) {
       .tile.tile-128 .tile-inner {
         font-size: 25px; } }
   .tile.tile-256 .tile-inner {
-    color: #f9f6f2;
-    background: #edcc61;
+
+    background: url('http://s17.postimg.org/gwf9dkg8v/uranus_big.png');
+    background-size: cover;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
     font-size: 45px; }
-    @media screen and (max-width: 520px) {
+    @media screen and (max-width: 480px) {
       .tile.tile-256 .tile-inner {
         font-size: 25px; } }
   .tile.tile-512 .tile-inner {
-    color: #f9f6f2;
-    background: #edc850;
+
+    background: url('http://s17.postimg.org/ty0y3f4n3/saturn_big.png');
+    background-size: cover;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
     font-size: 45px; }
-    @media screen and (max-width: 520px) {
+    @media screen and (max-width: 480px) {
       .tile.tile-512 .tile-inner {
         font-size: 25px; } }
   .tile.tile-1024 .tile-inner {
-    color: #f9f6f2;
-    background: #edc53f;
+    background: url('http://s17.postimg.org/ubxop9zcv/jupiter_big.png');
+    background-size: cover;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
     font-size: 35px; }
-    @media screen and (max-width: 520px) {
+    @media screen and (max-width: 480px) {
       .tile.tile-1024 .tile-inner {
         font-size: 15px; } }
   .tile.tile-2048 .tile-inner {
-    color: #f9f6f2;
-    background: #edc22e;
+
+    background: url('http://s17.postimg.org/9rxg4j8zj/sun_big.png');
+    background-size: cover;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
     font-size: 35px; }
-    @media screen and (max-width: 520px) {
+    @media screen and (max-width: 480px) {
       .tile.tile-2048 .tile-inner {
         font-size: 15px; } }
   .tile.tile-super .tile-inner {
-    color: #f9f6f2;
-    background: #3c3a32;
+
+    background: url('http://s3.postimg.org/cz9oe92n7/blackhole_big.png');
+    background-size: cover;    
     font-size: 30px; }
-    @media screen and (max-width: 520px) {
+    @media screen and (max-width: 480px) {
       .tile.tile-super .tile-inner {
         font-size: 10px; } }
 
@@ -486,7 +508,10 @@ hr {
   animation-fill-mode: backwards; }
 
 .game-intro {
-  margin-bottom: 0; }
+  margin-bottom: 0; 
+  margin-top: 5%;
+  letter-spacing: 1px;
+  text-align: center;}
 
 .game-explanation {
   margin-top: 50px; }
@@ -496,23 +521,39 @@ hr {
     font-size: 15px; }
 
   body {
+    max-width: 100%;
     margin: 20px 0;
     padding: 0 20px; }
 
   h1.title {
     font-size: 27px;
-    margin-top: 15px; }
+    margin-top: 10px; }
+
+  strong.important {
+    color: #FFFED2;
+  }
 
   .container {
+    background: #332F45;
+    color: #FFFED2;
+    border-radius: 20px;
     width: 280px;
     margin: 0 auto; }
 
   .score-container, .best-container {
-    margin-top: 0;
-    padding: 15px 10px;
+    background: #332F45;
+    color: #FFFED2;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 18px 12px;
     min-width: 40px; }
 
+    .score-container:after, .best-container:after {
+    text-align: center;
+    color: #FFFED2; }
+
   .heading {
+    background-color: #332F45;
     margin-bottom: 10px; }
 
   .game-container {
@@ -523,7 +564,7 @@ hr {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
-    background: #bbada0;
+    background: #332F45;
     border-radius: 6px;
     width: 280px;
     height: 280px;
@@ -538,7 +579,7 @@ hr {
       right: 0;
       bottom: 0;
       left: 0;
-      background: rgba(238, 228, 218, 0.5);
+      background: rgba(51, 47, 69, 0.5);
       z-index: 100;
       text-align: center;
       -webkit-animation: fade-in 800ms ease 1200ms;
@@ -558,7 +599,7 @@ hr {
         margin-top: 59px; }
       .game-container .game-message a {
         display: inline-block;
-        background: #8f7a66;
+        background: #332F45;
         border-radius: 3px;
         padding: 0 20px;
         text-decoration: none;
@@ -569,7 +610,7 @@ hr {
         .game-container .game-message a.keep-playing-button {
           display: none; }
       .game-container .game-message.game-won {
-        background: rgba(237, 194, 46, 0.5);
+        background: rgba(51, 47, 69, 0.5);
         color: #f9f6f2; }
         .game-container .game-message.game-won a.keep-playing-button {
           display: inline-block; }
@@ -594,8 +635,8 @@ hr {
     height: 57.5px;
     margin-right: 10px;
     float: left;
-    border-radius: 3px;
-    background: rgba(238, 228, 218, 0.35); }
+    border-radius: 100%;
+    background: rgba(41, 38, 56, 0.5); }
     .grid-cell:last-child {
       margin-right: 0; }
 
