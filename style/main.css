@@ -2,7 +2,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: url(http://astrophile.org/2048space/img/spacetile.png);
+  background: url(../img/spacetile.png);
   color: #FFFED2;
   font-family: "Muli", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px; }
